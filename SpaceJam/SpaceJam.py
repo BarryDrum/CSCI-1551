@@ -42,14 +42,14 @@ class MyApp(ShowBase):
         self.Planet2.setTexture(planetTex, 1)
 
         # Planet 3 Section
-        self.Planet3 = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
-        self.Planet3.reparentTo(self.render)
-        self.Planet3.setPos(3000, 14500, 3000)
-        self.Planet3.setScale(250)
+        self.lavaPlanet = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
+        self.lavaPlanet.reparentTo(self.render)
+        self.lavaPlanet.setPos(3000, 14500, 3000)
+        self.lavaPlanet.setScale(250)
         
         planetTex = self.loader.loadTexture("./Assets/Universe/sphere1_auv.jpg")
         planetTex = self.loader.loadTexture("./Assets/Planets/Lava.jpg")
-        self.Planet3.setTexture(planetTex, 1)
+        self.lavaPlanet.setTexture(planetTex, 1)
 
         # Planet 4 Section
         self.Planet4 = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
