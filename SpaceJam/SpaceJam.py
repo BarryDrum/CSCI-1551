@@ -22,24 +22,24 @@ class MyApp(ShowBase):
         self.Universe.setTexture(universeTex, 1)
 
         # Planet 1 Section
-        self.Planet1 = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
-        self.Planet1.reparentTo(self.render)
-        self.Planet1.setPos(-3000, 14500, 3000)
-        self.Planet1.setScale(350)
+        self.earthPlanet = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
+        self.earthPlanet.reparentTo(self.render)
+        self.earthPlanet.setPos(-3000, 14500, 3000)
+        self.earthPlanet.setScale(350)
         
         planetTex = self.loader.loadTexture("./Assets/Universe/sphere1_auv.jpg")
         planetTex = self.loader.loadTexture("./Assets/Planets/Earth.png")
-        self.Planet1.setTexture(planetTex, 1)
+        self.earthPlanet.setTexture(planetTex, 1)
 
         # Planet 2 Section
-        self.Planet2 = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
-        self.Planet2.reparentTo(self.render)
-        self.Planet2.setPos(-2000, 5000, 500)
-        self.Planet2.setScale(550)
+        self.sherbertPlanet = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
+        self.sherbertPlanet.reparentTo(self.render)
+        self.sherbertPlanet.setPos(-2000, 5000, 500)
+        self.sherbertPlanet.setScale(550)
         
         planetTex = self.loader.loadTexture("./Assets/Universe/sphere1_auv.jpg")
         planetTex = self.loader.loadTexture("./Assets/Planets/Sherbert.png")
-        self.Planet2.setTexture(planetTex, 1)
+        self.sherbertPlanet.setTexture(planetTex, 1)
 
         # Planet 3 Section
         self.lavaPlanet = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
@@ -52,34 +52,34 @@ class MyApp(ShowBase):
         self.lavaPlanet.setTexture(planetTex, 1)
 
         # Planet 4 Section
-        self.Planet4 = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
-        self.Planet4.reparentTo(self.render)
-        self.Planet4.setPos(-2300, 15000, 2000)
-        self.Planet4.setScale(400)
+        self.neptunePlanet = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
+        self.neptunePlanet.reparentTo(self.render)
+        self.neptunePlanet.setPos(-2300, 15000, 2000)
+        self.neptunePlanet.setScale(400)
         
         planetTex = self.loader.loadTexture("./Assets/Universe/sphere1_auv.jpg")
         planetTex = self.loader.loadTexture("./Assets/Planets/Neptune.jpg")
-        self.Planet4.setTexture(planetTex, 1)
+        self.neptunePlanet.setTexture(planetTex, 1)
 
         # Planet 5 Section
-        self.Planet5 = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
-        self.Planet5.reparentTo(self.render)
-        self.Planet5.setPos(-2500, 13000, -1000)
-        self.Planet5.setScale(300)
+        self.jupiterPlanet = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
+        self.jupiterPlanet.reparentTo(self.render)
+        self.jupiterPlanet.setPos(-2500, 13000, -1000)
+        self.jupiterPlanet.setScale(300)
         
         planetTex = self.loader.loadTexture("./Assets/Universe/sphere1_auv.jpg")
         planetTex = self.loader.loadTexture("./Assets/Planets/Jupiter.jpg")
-        self.Planet5.setTexture(planetTex, 1)
+        self.jupiterPlanet.setTexture(planetTex, 1)
 
         # Planet 6 Section
-        self.Planet6 = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
-        self.Planet6.reparentTo(self.render)
-        self.Planet6.setPos(2500, 12000, 0)
-        self.Planet6.setScale(600)
+        self.marsPlanet = self.loader.loadModel("./Assets/Universe/protoPlanet.x")
+        self.marsPlanet.reparentTo(self.render)
+        self.marsPlanet.setPos(2500, 12000, 0)
+        self.marsPlanet.setScale(600)
         
         planetTex = self.loader.loadTexture("./Assets/Universe/sphere1_auv.jpg")
         planetTex = self.loader.loadTexture("./Assets/Planets/Mars.jpg")
-        self.Planet6.setTexture(planetTex, 1)
+        self.marsPlanet.setTexture(planetTex, 1)
         # Space Station Section
         self.SpaceStation = self.loader.loadModel("./Assets/Space Station/SpaceStation1B/SpaceStation1B/spaceStation.x")
         self.SpaceStation.reparentTo(self.render)
