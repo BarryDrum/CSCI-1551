@@ -13,7 +13,7 @@ class MyApp(ShowBase):
         # Universe Section
         self.Universe = self.loader.loadModel("./Assets/Universe/Universe.x")
         self.Universe.reparentTo(self.render)
-        self.Universe.setScale(15000)
+        self.Universe.setScale(17000)
         self.Universe.setTwoSided(True)
         self.Universe.setLightOff()
 
