@@ -1,8 +1,6 @@
 import random, math
 from panda3d.core import Vec3
 
-
-# -------- CLOUD DEFENSE --------
 def Cloud(radius = 1):
     x = 2 * random.random() - 1
     y = 2 * random.random() - 1
@@ -12,8 +10,6 @@ def Cloud(radius = 1):
 
     return unitVec * radius
 
-
-# -------- BASEBALL SEAMS (FREE POINTS) --------
 def BaseballSeams(step, numSeams, B, F=1):
     time = step / float(numSeams) * 2 * math.pi
 
@@ -32,8 +28,6 @@ def BaseballSeams(step, numSeams, B, F=1):
 
     return Vec3(x, y, z)
 
-
-# -------- CIRCLE X PLANE --------
 def CircleX(radius, t):
     x = 0
     y = radius * math.cos(t)
@@ -41,8 +35,6 @@ def CircleX(radius, t):
 
     return (x, y, z)
 
-
-# -------- CIRCLE Y PLANE --------
 def CircleY(radius, t):
     x = radius * math.cos(t)
     y = 0
@@ -50,8 +42,6 @@ def CircleY(radius, t):
 
     return (x, y, z)
 
-
-# -------- CIRCLE Z PLANE --------
 def CircleZ(radius, t):
     x = radius * math.cos(t)
     y = radius * math.sin(t)
