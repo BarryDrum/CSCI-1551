@@ -33,18 +33,18 @@ def CircleX(radius, t):
     y = radius * math.cos(t)
     z = radius * math.sin(t)
 
-    return (x, y, z)
+    return Vec3(x, y, z)
 
 def CircleY(radius, t):
     x = radius * math.cos(t)
     y = 0
     z = radius * math.sin(t)
 
-    return (x, y, z)
+    return Vec3(x, y, z)
 
 def CircleZ(radius, t):
     x = radius * math.cos(t)
     y = radius * math.sin(t)
     z = 0
 
-    return (x, y, z)
+    return Vec3(x, y, z)
