@@ -18,7 +18,10 @@ class MyApp(ShowBase):
         self.jupiterPlanet = spaceJamClasses.Planet(self.loader, "./Assets/Universe/protoPlanet.x", self.render, "Jupiter", "./Assets/Planets/Jupiter.jpg", (-2500, 13000, -1000), 300)
         self.marsPlanet = spaceJamClasses.Planet(self.loader, "./Assets/Universe/protoPlanet.x", self.render, "Mars", "./Assets/Planets/Mars.jpg", (2500, 12000, 0), 600)
         self.SpaceStation = spaceJamClasses.SpaceStation(self.loader, "./Assets/Space Station/SpaceStation1B/SpaceStation1B/spaceStation.x", self.render, "SpaceStation", "./Assets/Space Station/SpaceStation1B/SpaceStation1B/SpaceStation1_NM.png", (0, 13000, 1500), 100, (-180, 60, 50))
-        self.SpaceShip = spaceJamClasses.SpaceShip(self.loader, "./Assets/SpaceShips/Dumbledore/Dumbledore/Dumbledore.x", self.render, "SpaceShip", "./Assets/SpaceShips/Dumbledore/Dumbledore/spacejet_N.png", (0, 400, -70), 30, (0, 90, 0))
+        self.SpaceShip = spaceJamClasses.SpaceShip(self.loader, "./Assets/SpaceShips/Dumbledore/Dumbledore/Dumbledore.x", self.render, "SpaceShip", "./Assets/SpaceShips/Dumbledore/Dumbledore/spacejet_N.png", (0, 400, -70), 30, (0, 0, 0))
+        self.SetCamera()
+        self.SpaceShip.setKeyBindings()
+        
         fullCycle = 60
 
         for j in range(fullCycle):
@@ -38,9 +41,6 @@ class MyApp(ShowBase):
             self.DrawCircleX(self.sherbertPlanet, sherbertName, 600, t)
             self.DrawCircleY(self.marsPlanet, marsName, 600, t)
             self.DrawCircleZ(self.jupiterPlanet, jupiterName, 600, t)
-        
-
-
  
     def DrawBaseballSeams(self, centralObject, droneName, step, numSeams, radius = 1):
         unitVec = defensePaths.BaseballSeams(step, numSeams, B = 0.4)
@@ -68,6 +68,12 @@ class MyApp(ShowBase):
         unitVec = defensePaths.CircleZ(radius, t)
         position = unitVec + centralObject.model.getPos()
         spaceJamClasses.Drone(self.loader, "./Assets/DroneDefender/DroneDefender/DroneDefender.obj", self.render, droneName, "./Assets/DroneDefender/DroneDefender/octotoad1_auv.png", position, 5)
+
+    def SetCamera(self):
+        self.disableMouse()
+        self.camera.reparentTo(self.SpaceShip.model)
+        self.camera.setFluidPos(0, 1, 0)
+
 
 app = MyApp()
 app.run()
