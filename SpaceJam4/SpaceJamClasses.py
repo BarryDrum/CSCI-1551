@@ -36,8 +36,7 @@ class Drone(SphereCollideObj):
 
 class Universe(InverseSphereCollideObject):
     def __init__(self, loader: Loader, modelPath: str, parentNode: NodePath, nodeName: str, texPath: str, scaleVal: float):
-        super(Universe, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0,0,0), 16500)
-
+        super(Universe, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0, 0, 0), scaleVal * 0.99)
         self.model = loader.loadModel(modelPath)
         self.model.reparentTo(parentNode)
 
