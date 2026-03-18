@@ -19,7 +19,7 @@ class MyApp(ShowBase):
 
         self.cTrav.addCollider(self.SpaceShip.collisionNode, self.pusher)
 
-        #self.cTrav.showCollisions(self.render)
+        self.cTrav.showCollisions(self.render)
 
     def SetupScene(self):
   
